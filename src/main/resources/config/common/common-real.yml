@@ -1,0 +1,17 @@
+# logging config
+logging:
+  config: classpath:logback-spring.xml
+  file:
+    name: ${spring.application.name}
+
+feign:
+  client:
+    config:
+      default:
+        logger-level: FULL
+      alimtalkReqClient:
+        logger-level: FULL
+      farfetchRequestClient:
+        logger-level: FULL
+        connectTimeout: 10000
+        readTimeout: 300000

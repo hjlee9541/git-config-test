@@ -8,7 +8,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/hjlee9541/git-config-test.git
+          uri: https://github.com/hjlee9541/git-config-test
+          cloneOnStart: true
+          searchPaths: 'resource/config/{application}'
           default-label: main
 management:
   endpoints:
